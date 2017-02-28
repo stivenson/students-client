@@ -21,21 +21,21 @@ gulp.task('server', function() {
 
 //Pre-procesa archivos Stylus a CSS y recarga los cambios
 gulp.task('css', function() {
-    gulp.src('./app/stylesheets/main.styl')
+    gulp.src('./app/modules/students/stylesheets/main.styl')
         .pipe(stylus({ use: nib() }))
-        .pipe(gulp.dest('./app/stylesheets'))
+        .pipe(gulp.dest('./app/modules/students/stylesheets'))
         .pipe(connect.reload());
 });
 
 // Recarga el navegador cuando hay cambios en el HTML
 gulp.task('html', function(){
-    gulp.src('./app/**/*.html')
+    gulp.src('./app/modules/students/**/*.html')
         .pipe(connect.reload());
 });
 
 // Busca errores en el JS y nos los muestra por pantalla
 gulp.task('jshint', function(){
-    return gulp.src('./app/scripts/**/*.js')
+    return gulp.src('./app/modules/students/scripts/**/*.js')
                 .pipe(jshint('.jshintrc'))
                 .pipe(jshint.reporter('jshint-stylish'))
                 .pipe(jshint.reporter('fail'));
@@ -43,7 +43,7 @@ gulp.task('jshint', function(){
 
 // Busca en las carpetas de estilos y javascript los archivos que hayamos creado para inyectarlos en el index.html
 gulp.task('inject', function(){
-    var sources = gulp.src(['./app/scripts/**/*.js','./app/stylesheets/**/*.css']);
+    var sources = gulp.src(['./app/modules/students/scripts/**/*.js','./app/modules/students/stylesheets/**/*.css']);
     return gulp.src('index.html',{cwd:'./app'})
                 .pipe(inject(sources,{
                     read: false,
@@ -63,9 +63,9 @@ gulp.task('wiredep',function(){
 
 // Vigila cambios que se produzcan en el código y lanza las tareas relacionadas
 gulp.task('watch', function() {
-    gulp.watch(['./app/**/*.html'], ['html']);
-    gulp.watch(['./app/stylesheets/**/*.styl'], ['css','inject']);
-    gulp.watch(['./app/scripts/**/*.js','./Gulpfile.js'], ['jshint','inject']);
+    gulp.watch(['./app/modules/students/**/*.html'], ['html']);
+    gulp.watch(['./app/modules/students/stylesheets/**/*.styl'], ['css','inject']);
+    gulp.watch(['./app/modules/students/scripts/**/*.js','./Gulpfile.js'], ['jshint','inject']);
     gulp.watch(['./bower.json'],['wiredep']);
 });
 

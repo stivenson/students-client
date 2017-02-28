@@ -9,13 +9,11 @@
     $qProvider.errorOnUnhandledRejections(false);
     $routeProvider
       .when('/',{
-        templateUrl: 'views/student-list.html',
+        templateUrl: 'modules/students/views/student-list.html',
         controller: 'StudentListController',
         controllerAs: 'studentlist'
       });
   }
-
-
 
   angular
     .module('student')
