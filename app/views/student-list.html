@@ -7,7 +7,7 @@
             <th>Detalle</th>
         </thead>
         <tbody>
-            <tr ng-repeat="s in studentlist.students" >
+            <tr ng-repeat="s in studentlist.students" ng-style="{'color':'{{s.color}}'}" >
                 <td>{{s.id}}</td>
                 <td>{{s.name}}</td>
                 <td>{{s.yearsOld}}</td>
