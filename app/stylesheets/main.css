@@ -28,14 +28,17 @@ a:hover {
   max-width: 600px;
 }
 .red-grade {
-  color: #fff;
+  color: #fff !important;
   background-color: #f00;
+  font-weight: bold;
 }
 .yellow-grade {
-  color: rgba(0,0,0,0) 0;
+  color: #fff !important;
   background-color: #ff0;
+  font-weight: bold;
 }
 .green-grade {
-  color: #fff;
+  color: #fff !important;
   background-color: #008000;
+  font-weight: bold;
 }
