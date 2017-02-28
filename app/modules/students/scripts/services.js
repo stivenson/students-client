@@ -17,8 +17,8 @@
 
 angular
   .module('student.services')
-  // .constant('BaseUrl', 'http://localhost:3010') Development
-  .constant('BaseUrl', 'https://students-api.herokuapp.com')
+  .constant('BaseUrl', 'http://localhost:3010') 
+  //.constant('BaseUrl', 'https://students-api.herokuapp.com') // for production (Heroku)
   .factory('Student', Student);
 
 })();

@@ -5,9 +5,10 @@
   "dependencies": {
     "angular": "^1.5.0",
     "bootstrap": "^3.3.6",
-    "angular-route": "^1.5.0",
+    "angular-route": "^1.6.2",
     "angular-resource": "^1.5.0",
-    "font-awesome": "fontawesome#^4.5.0"
+    "font-awesome": "fontawesome#^4.5.0",
+    "angular-mocks": "^1.6.2"
   },
   "devDependencies": {
     "angular": "^1.5.0",
