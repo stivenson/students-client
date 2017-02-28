@@ -1,6 +1,10 @@
 (function(){
   'use strict';
 
+  /**
+  * Config of modules
+  **/
+
   angular.module('student',['ngRoute','student.controllers']);
 
   function config($locationProvider, $routeProvider,$httpProvider,$qProvider) {

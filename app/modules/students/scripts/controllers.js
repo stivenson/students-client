@@ -2,9 +2,13 @@
 
   'use strict';
 
+  /**
+  * Controllers of students
+  **/
+
   angular.module('student.controllers', ['student.services']);
 
-
+    // List Student resource
     function StudentListController(Student) {
       this.currentDetail = false;
         Student.query().$promise.then(function(r){
@@ -23,9 +27,6 @@
           return parseFloat(average/grades.length).toFixed(2).toString().replace(".", ",");
         };
     }
-
-
-
 
     angular.module('student.controllers').controller('StudentListController', StudentListController);
 
