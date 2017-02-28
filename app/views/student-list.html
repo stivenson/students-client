@@ -1,0 +1,23 @@
+<div class="table-responsive">
+    <table class="table" >
+        <thead>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Años</th>
+            <th>Detalle</th>
+        </thead>
+        <tbody>
+            <tr ng-repeat="s in studentlist.students" >
+                <td>{{s.id}}</td>
+                <td>{{s.name}}</td>
+                <td>{{s.yearsOld}}</td>
+                <td ng-show="s.currentDetail = s.id">
+                    <ol ng-repeat="g in s.grades" >
+                        <ul>{{g}}</ul>
+                    </ol>
+                </td>
+            </tr>
+        </tbody>
+</table>
+STD: {{students}}
+</div>
