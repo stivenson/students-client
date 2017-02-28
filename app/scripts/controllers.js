@@ -14,7 +14,17 @@
         this.changeDetail = function(id){
           this.currentDetail = (id == this.currentDetail ? false : id);
         };
+
+        this.average = function(grades){
+          var average=parseFloat(0.0);
+          for(var grade in grades){
+            average += parseFloat(grades[grade]);
+          }
+          return parseFloat(average/grades.length).toFixed(2).toString().replace(".", ",");
+        };
     }
+
+
 
 
     angular.module('student.controllers').controller('StudentListController', StudentListController);

@@ -3,7 +3,8 @@
         <thead>
             <th>ID</th>
             <th>Nombre</th>
-            <th>Años</th>
+            <th>Edad</th>
+            <th>Promedio</th>
             <th>Detalle</th>
         </thead>
         <tbody>
@@ -11,6 +12,7 @@
                 <td>{{s.id}}</td>
                 <td>{{s.name}}</td>
                 <td>{{s.yearsOld}}</td>
+                <td class="average">{{studentlist.average(s.grades)}}</td>
                 <td>
                     <a ng-click="studentlist.changeDetail(s.id)">
                         <i class="fa fa-list" aria-hidden="true"></i> Detalle

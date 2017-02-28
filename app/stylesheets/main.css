@@ -42,3 +42,7 @@ a:hover {
   background-color: #008000;
   font-weight: bold;
 }
+.average {
+  font-weight: bold;
+  font-size: 18px;
+}
