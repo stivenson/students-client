@@ -56,7 +56,7 @@ gulp.task('inject', function(){
 gulp.task('wiredep',function(){
     gulp.src('./app/index.html')
         .pipe(wiredep({
-            directory:'./app/bower_components'
+            directory:'./app/lib'
         }))
         .pipe(gulp.dest('./app'));
 });
@@ -66,7 +66,7 @@ gulp.task('watch', function() {
     gulp.watch(['./app/**/*.html'], ['html']);
     gulp.watch(['./app/stylesheets/**/*.styl'], ['css','inject']);
     gulp.watch(['./app/scripts/**/*.js','./Gulpfile.js'], ['jshint','inject']);
-    gulp.watch(['./app/bower.json'],['wiredep']);
+    gulp.watch(['./bower.json'],['wiredep']);
 });
 
 gulp.task('default', ['server','inject','wiredep','watch']);

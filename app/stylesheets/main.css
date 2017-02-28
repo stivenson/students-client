@@ -14,3 +14,28 @@ body {
   font-family: 'Raleway-Light';
   font-size: 16px;
 }
+a {
+  cursor: pointer;
+  text-decoration: none;
+}
+a:hover {
+  cursor: pointer;
+  text-decoration: none;
+}
+.container-custom {
+  margin: 0 auto;
+  padding: 20px;
+  max-width: 600px;
+}
+.red-grade {
+  color: #fff;
+  background-color: #f00;
+}
+.yellow-grade {
+  color: rgba(0,0,0,0) 0;
+  background-color: #ff0;
+}
+.green-grade {
+  color: #fff;
+  background-color: #008000;
+}

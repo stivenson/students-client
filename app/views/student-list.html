@@ -11,13 +11,15 @@
                 <td>{{s.id}}</td>
                 <td>{{s.name}}</td>
                 <td>{{s.yearsOld}}</td>
-                <td ng-show="s.currentDetail = s.id">
-                    <ol ng-repeat="g in s.grades" >
-                        <ul>{{g}}</ul>
+                <td>
+                    <a ng-click="studentlist.changeDetail(s.id)">
+                        <i class="fa fa-list" aria-hidden="true"></i> Detalle
+                    </a>
+                    <ol ng-show="studentlist.currentDetail == s.id" ng-repeat="g in s.grades track by $index" >
+                        <ul ng-class="{'red-grade':g<3,'yellow-grade':(g>2.9 && g<4),'green-grade':g>3.9}">{{g}}</ul>
                     </ol>
                 </td>
             </tr>
         </tbody>
 </table>
-STD: {{students}}
 </div>
