@@ -7,7 +7,9 @@
   "description": "Cliente web de proyecto de prueba para Cuemby",
   "license": "MIT",
   "author": "Stivenson Rincon <stivenson.rpm@gmail.com>",
-  "dependencies": {},
+  "dependencies": {
+    "stylus": "^0.54.5"
+  },
   "devDependencies": {
     "connect-history-api-fallback": "~1.1.0",
     "gulp": "~3.9.1",

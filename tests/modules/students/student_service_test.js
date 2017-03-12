@@ -11,7 +11,7 @@ describe('Modulo students', function () {
         var studentsService;
 
         beforeEach(function () {
-            inject(['Student', function (service) {
+            inject(['Student,$httpBackend', function (service,$httpBackend) {
                     studentsService = service;
                 }
             ]);
